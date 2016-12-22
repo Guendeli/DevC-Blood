@@ -1,0 +1,52 @@
+.donors {
+  .person-container {
+    margin-top: 25px;
+
+    .name {
+      font-size: 24px;
+      width: 220px;
+    }
+    div {
+      border-right: 1px solid #ccc;
+      display: inline-block;
+      height: 80px;
+      padding-right: 10px;
+      width: 120px;
+      vertical-align: top;
+      padding: 10px;
+
+      span {
+        display: block;
+
+      }
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    .achievement {
+      background-size: 72px 72px;
+      &.d0-times {
+        &:after {
+          content: '-';
+          text-align: center;
+        }
+      }
+      &.d1-times {
+        background: image-url('/images/1-times.png') no-repeat center center;
+        background-size: 72px 72px;
+      }
+      &.d5-times {
+        background: image-url('/images/5-times.png') no-repeat center center;
+        background-size: 72px 72px;
+      }
+      &.d10-times {
+        background: image-url('/images/10-times.png') no-repeat center center;
+        background-size: 72px 72px;
+      }
+      &.d15-times {
+        background: image-url('/images/15-times.png') no-repeat center center;
+        background-size: 72px 72px;
+      }
+    }
+  }
+}

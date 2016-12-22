@@ -1,0 +1,69 @@
+<div class="home">
+  <div class="container">
+    <div class="institution-data-container">
+      <h2>{{lang.institutionInfo}}</h2>
+      <div ng-hide="formShow" class="data-fields">
+        <div class="data-field">
+          <span class="name">{{lang.name}}:</span>
+          <span class="bold value">{{institution.name}}</span>
+        </div>
+        <div class="data-field">
+          <span class="name">{{lang.location}}:</span>
+          <span class="bold value">{{institution.location}}</span>
+        </div>
+        <div class="data-field">
+          <span class="name">{{lang.description}}:</span>
+          <span class="bold value">{{institution.description}}</span>
+        </div>
+        <div class="edit-btn-container text-right">
+          <a class="btn btn-submit" ng-click="formShow=true">{{lang.manageInstitutionInfo}}</a>
+        </div>
+      </div>
+      <div ng-show="formShow" class="data-form">
+        <form accept-charset="utf-8">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <input class="form-control input-clear" type="text" ng-model="institution.name" placeholder="{{lang.name}}">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <input class="form-control input-clear" type="text" ng-model="institution.location" placeholder="{{lang.location}}">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <input class="form-control input-clear" type="text" ng-model="institution.description" placeholder="{{lang.description}}">
+            </div>
+          </div>
+        </form>
+        <div class="edit-btn-container text-right">
+          <a class="btn btn-submit" ng-click="formShow=false">{{lang.cancel}}</a>
+          <a class="btn btn-submit" ng-click="formShow=false; updateInstitution()">{{lang.updateInstitutionInfo}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="blood-levels-container">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6 col-sm-3" ng-repeat="b in blood">
+            <div class="blood-level">
+              <div class="block">
+                <div class="frg"></div>
+                <div class="bck" style="height: {{b.height}}px;"></div>
+                <div class="type">{{b.type}}<span class="super">{{b.super}}</span></div>
+              </div>
+              <div class="value">{{b.value / 2}}<span class="unit">L</span></div>
+              <div class="form">
+                <input type="number" ng-change="onBloodChange(b)" class="form-control input-clear" ng-model="b.newvalue" placeholder="{{b.value/2}}">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="edit-btn-container text-right">
+          <div class="btn btn-submit" ng-click="updateBloodValues()">{{lang.updateBloodValues}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

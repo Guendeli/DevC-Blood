@@ -1,0 +1,195 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+@import "login";
+@import "home";
+@import "superadmin";
+@import "donors";
+
+$blood-red: #E74C3C;
+$blood-dark-red: #C13F31;
+$blood-light-red: #F8745C;
+$dark-grey: #383B40;
+$light-grey: #A7A9AC;
+
+//GLOBALS
+.btn {
+  transition: all 0.2s;
+  border-radius: 0;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.super {
+  vertical-align: super;
+}
+.bold {
+  font-weight: bold;
+}
+
+.input-clear {
+  box-shadow: none;
+  border-radius: 0px;
+  transition: all 0.2s;
+  &:focus {
+    box-shadow: none;
+    border-color: $blood-red;
+  }
+}
+a {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.link {
+  color: $blood-red;
+  &:hover {
+    color: $blood-dark-red;
+  }
+}
+
+.btn {
+  &.btn-submit {
+    background-color: $blood-red;
+    color: #fff;
+    &:hover {
+      background-color: $blood-dark-red;
+    }
+  }
+  &.btn-red {
+    background-color: $blood-red;
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      color: $blood-red;
+    }
+  }
+  &.btn-dark-red {
+    background-color: $blood-dark-red;
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      color: $blood-dark-red;
+    }
+  }
+}
+
+span {
+  &.error {
+    color: #EE4433;
+    text-align: left;
+  }
+}
+
+.bck-color {
+  height: 500px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  &.red {
+    background-color: $blood-red;
+  }
+  .break {
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    bottom: -20px;
+    left: 0;
+    background: image-url('/images/break.png') center center;
+  }
+}
+
+//HEADER
+
+.header {
+  height: 80px;
+  //padding: 20px;
+  //line-height: 24px;
+  background-color: $blood-red;
+  color: #fff;
+
+  .app-name {
+    //line-height: 70px;
+    height: 80px;
+    width: 84px;
+    margin: 0;
+    display: inline-block;
+    float: left;
+    background: $blood-dark-red image-url('/images/logo.png') no-repeat center center;
+
+    &:hover {
+      background-color: $blood-light-red;
+    }
+    transition: all 0.2s;
+  }
+
+  .logout {
+    height: 80px;
+    width: 84px;
+    margin: 0;
+    display: inline-block;
+    float: right;
+    background: $blood-red image-url('/images/logout_icon.png') no-repeat center center;
+    background-size: 32px 32px;
+
+    &:hover {
+      background-color: $blood-dark-red;
+
+    }
+    transition: all 0.2s;
+  }
+
+  .nav-pills {
+    display: inline-block;
+
+    li {
+      a {
+        padding: 0 15px;
+        color: #fff;
+        border-radius: 0;
+        height: 80px;
+        display: inline-block;
+        line-height: 80px;
+        background-color: $blood-red;
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: $blood-dark-red;
+        }
+      }
+    }
+  }
+
+
+  .login-info {
+    text-align: right;
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.margintop {
+  margin-top: 20px;
+}
+
+.center {
+  text-align: center;
+}

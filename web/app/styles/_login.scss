@@ -1,0 +1,111 @@
+$blood-red: #E74C3C;
+$blood-dark-red: #C13F31;
+$blood-light-red: #F8745C;
+$dark-grey: #383B40;
+$light-grey: #A7A9AC;
+
+.login {
+  position: relative;
+  top: -80px;
+
+  .ll-logo {
+    width: 100%;
+    height: 500px;
+    //margin-top: 30px;
+    margin-bottom: 90px;
+    text-align: center;
+
+    background: image-url('/images/logo_big.png') no-repeat center center;
+  }
+  .navbar {
+    text-align: center;
+    ul {
+      display: inline-block;
+      li {
+        display: inline-block;
+        a {
+          margin: 5px 5px;
+        }
+      }
+    }
+  }
+  .login-container {
+    text-align: center;
+
+    .login-form {
+      padding: 20px;
+      margin: 0 30px;
+      margin-bottom: 30px;
+
+      input {
+        margin: 10px 0;
+        background-color: $blood-red;
+        color: #fff;
+        transition: all 0.2s;
+        border: 1px solid $blood-red;
+
+        &::-webkit-input-placeholder { /* WebKit browsers */
+          opacity: 0.7;
+          color: #fff;
+        }
+        &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+          opacity: 0.7;
+          color: #fff;
+        }
+        &::-moz-placeholder { /* Mozilla Firefox 19+ */
+          opacity: 0.7;
+          color: #fff;
+        }
+        &:-ms-input-placeholder { /* Internet Explorer 10+ */
+          opacity: 0.7;
+          color: #fff;
+        }
+
+        &:focus {
+          background-color: #fff;
+          color: #444;
+
+          &::-webkit-input-placeholder { /* WebKit browsers */
+            color: #aaa;
+          }
+          &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: #aaa;
+          }
+          &::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #aaa;
+          }
+          &:-ms-input-placeholder { /* Internet Explorer 10+ */
+            color: #aaa;
+          }
+        }
+      }
+
+      .login-submit {
+        width: 100%;
+        border-radius: 0;
+
+        &:hover {
+          background-color: $blood-light-red;
+          border-color: $blood-light-red;
+        }
+        &:focus {
+          background-color: $blood-red;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.localization-container {
+  select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    color: #FFFFFF;
+    background-color: $blood-red;
+    border: none;
+    box-shadow: none;
+}
+}

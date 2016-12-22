@@ -1,0 +1,50 @@
+<div class="container">
+  <h1>TEST VERSION</h1>
+
+  <h4>Add donor/institution - tablica User</h4>
+  <div class="">
+    <input class="form-control input-clear" type="text" ng-model="userData.username" placeholder="username">
+    <input class="form-control input-clear" type="text" ng-model="userData.password" placeholder="password">
+    <input class="form-control input-clear" type="text" ng-model="userData.type" placeholder="donor/admin/superadmin">
+    <input class="btn btn-submit" type="button" ng-click="onAddUserClick()" value="Add user">
+  </div>
+
+  <div ng-show="currentUser">
+    <h4>Add Institution data - tablica InstitutionData</h4>
+    <div class="">
+      <input class="form-control input-clear" type="text" ng-model="userData.name" placeholder="name">
+      <input class="form-control input-clear" type="text" ng-model="userData.city" placeholder="password">
+      <input class="btn btn-submit" type="button" ng-click="onAddInstitutionDataClick()" value="Add institution data">
+    </div>
+  </div>
+
+  <div ng-show="currentUser">
+    <h4>Add user data - tablica UserData</h4>
+    <div class="">
+      <input class="form-control input-clear" type="text" ng-model="userData.name" placeholder="name">
+      <input class="form-control input-clear" type="text" ng-model="userData.surname" placeholder="surname">
+      <input class="form-control input-clear" type="text" ng-model="userData.bloodType" placeholder="blood type">
+      <input class="btn btn-submit" type="button" ng-click="onAddInstitutionDataClick()" value="Add user data">
+    </div>
+  </div>
+
+  <div ng-show="currentUser">
+    <h4>Add institution blood - tablica InstitutionBlood</h4>
+    <div class="">
+      <input class="form-control input-clear" type="text" ng-model="userData.bloodType" placeholder="blood type">
+      <input class="form-control input-clear" type="text" ng-model="userData.value" placeholder="value">
+      <input class="btn btn-submit" type="button" ng-click="onAddInstitutionBloodClick()" value="Add institution blood">
+    </div>
+  </div>
+
+  <div ng-show="currentUser">
+    <h4>Add new donation -tablica UserDonation</h4>
+    <div class="">
+      <input class="form-control input-clear" type="text" ng-model="userData.date" placeholder="Datum">
+      <input class="form-control input-clear" type="text" ng-model="userData.userId" placeholder="userId">
+      <input class="btn btn-submit" type="button" ng-click="onAddDonation()" value="Add institution blood">
+    </div>
+  </div>
+
+  <input class="btn btn-submit" type="button" ng-click="makePush()" value="Push">
+</div>

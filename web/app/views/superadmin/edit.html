@@ -1,0 +1,51 @@
+<div class="superadmin">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="data-form" ng-show="institutionID" >
+          <form  accept-charset="utf-8">
+            <div>
+              <div>{{lang.name}}</div>
+              <input class="form-control input-clear" type="text" ng-model="institution.name" placeholder="{{lang.name}}">
+            </div>
+            <div>
+              <div>{{lang.city}}</div>
+              <input class="form-control input-clear" type="text" ng-model="institution.city" placeholder="{{lang.city}}">
+            </div>
+          </form>
+          <div class="edit-btn-container">
+            <a class="btn btn-submit" ng-click="updateInfo()">{{lang.updateInstitutionInfo}}</a>
+          </div>
+        </div>
+
+        <div class="data-form" ng-show="!institutionID" >
+          <form  accept-charset="utf-8">
+            <div>
+              <div>{{lang.username}}</div>
+              <input class="form-control input-clear" type="text" ng-model="institution.username" placeholder="{{lang.username}}">
+            </div>
+            <div>
+              <div>{{lang.password}}</div>
+              <input class="form-control input-clear" type="text" ng-model="institution.password" placeholder="{{lang.password}}">
+            </div>
+            <div>
+              <div>{{lang.name}}</div>
+              <input class="form-control input-clear" type="text" ng-model="institution.name" placeholder="{{lang.name}}">
+            </div>
+            <div>
+              <div>{{lang.city}}</div>
+              <input class="form-control input-clear" type="text" ng-model="institution.city" placeholder="{{lang.city}}">
+            </div>
+            <div>
+              <div>{{lang.email}}</div>
+              <input class="form-control input-clear" type="text" ng-model="institution.email" placeholder="{{lang.email}}">
+            </div>
+          </form>
+          <div class="edit-btn-container">
+              <a class="btn btn-submit" ng-click="createInstitution()">{{lang.addInstitution}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

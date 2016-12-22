@@ -1,0 +1,15 @@
+.superadmin {
+  .table {
+    tr {
+      &:nth-child(2n) {
+        background-color: #fff4f8;
+      }
+    }
+  }
+
+  .data-form {
+    form {
+      margin-bottom: 20px;
+    }
+  }
+}

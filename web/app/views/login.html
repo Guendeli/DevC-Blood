@@ -1,0 +1,50 @@
+<div class="login">
+  <div class="bck-color red">
+    <div class="break"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="ll-logo"></div>
+      </div>
+      <div class="col-xs-12">
+        <div class="login-container">
+          <div ng-hide="forgotPass" class="login-form">
+            <span ng-show="error.hasError" class="error">{{error.msg}}</span>
+            <div class="row">
+              <form>
+                <div class="col-sm-4 col-sm-offset-1">
+                  <input class="form-control input-clear" type="text" ng-model="loginUser.username" placeholder="{{lang.username}}">
+                </div>
+                <div class="col-sm-4">
+                  <input class="form-control input-clear" type="password" ng-model="loginUser.password" placeholder="{{lang.password}}">
+                </div>
+                <div class="col-sm-2">
+                  <input class="btn btn-submit login-submit" type="submit" ng-click="onLoginClick()" value="{{lang.submit}}">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div ng-show="forgotPass" class="login-form">
+            <span ng-show="error.hasError" class="error">{{error.msg}}</span>
+            <div class="row">
+              <form>
+                <div class="col-sm-4 col-sm-offset-2">
+                  <input class="form-control input-clear" type="text" ng-model="loginUser.email" placeholder="{{lang.email}}">
+                </div>
+                <div class="col-sm-2">
+                  <input class="btn btn-submit login-submit" type="submit" ng-click="onForgotPassword()" value="{{lang.submit}}">
+                </div>
+                <div class="col-sm-2">
+                  <input class="btn btn-submit login-submit" type="button" ng-click="forgotPass=false" value="{{lang.cancel}}">
+                </div>
+              </form>
+            </div>
+          </div>
+          <a ng-hide="forgotPass" ng-click="forgotPass=true" class="link red">{{lang.forgotPassword}}</a>
+          <span ng-hide="!forgotPass" ng-show="mailSent" class="link">{{lang.emailReset}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

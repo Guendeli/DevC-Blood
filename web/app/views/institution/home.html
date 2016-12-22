@@ -1,0 +1,24 @@
+<div class="home">
+  <div class="container">
+    <div class="blood-levels-container">
+      <div class="container-fluid">
+        <h2>{{lang.internal}}</h2>
+        <div class="row">
+          <div class="col-xs-6 col-sm-3" ng-repeat="b in bloodInternal">
+            <div class="blood-level">
+              <div class="block">
+                <div class="frg"></div>
+                <div class="bck" style="height: {{b.height}}px;"></div>
+                <div class="type">{{b.type}}<span class="super">{{b.super}}</span></div>
+              </div>
+              <div class="value">{{b.value / 2}}<span class="unit">L</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="edit-btn-container text-right">
+        <a class="btn btn-submit" ng-href="#/institution/info">{{lang.manageBloodSupply}}</a>
+      </div>
+    </div>
+  </div>
+</div>

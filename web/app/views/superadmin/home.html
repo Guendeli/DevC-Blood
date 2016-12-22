@@ -1,0 +1,24 @@
+<div class="superadmin">
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>{{lang.institutionName}}</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="institution in institutions">
+          <td>{{institution.get('name')}}</td>
+          <td><a class="link" ng-click="removeInstitution()">{{lang.removeInstitution}}</a></td>
+          <td><a class="link" ng-click="updateInstitution()">{{lang.editInstitution}}</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="new-btn-container">
+      <a class="btn btn-submit" ng-click="addNewInstitution()">{{lang.addInstitution}}</a>
+    </div>
+  </div>
+</div>
