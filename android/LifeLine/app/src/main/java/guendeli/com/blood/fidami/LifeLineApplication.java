@@ -32,7 +32,7 @@ public class LifeLineApplication extends Application {
         Parse.enableLocalDatastore(getApplicationContext());
         Parse.initialize(new Parse.Configuration.Builder(this)
                 .applicationId("fidami")
-                .server("http://163.172.172.165:1337/parse/")
+                .server("http://192.168.148.1:1337/parse/")
         .build()
         );
         ParseTwitterUtils.initialize("GtQtnF894a6USOPRIVZx2HWfv",

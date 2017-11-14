@@ -58,7 +58,7 @@ public class MainActivity extends ActionBarActivity
                 String time = pushData.optString("time");
                 showPushDialog(eventId, location, time);
             } catch (Exception e) {
-                Log.v("com.parse.ParsePushReceiver",
+                Log.v("ParsePushReceiver",
                     "Unexpected", e);
                 e.printStackTrace();
             }
